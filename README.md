@@ -1,2 +1,9 @@
 ## Tilt
-#### ```tilt up```
+
+
+#### Tilt must be installed before hand: https://docs.tilt.dev/install.html
+You may need to update your relative paths in docker-compose.yml for ui-starter-app
+run ```tilt up```
+press space to open the tilt ui
+refer to tilt.dev for more info
+
