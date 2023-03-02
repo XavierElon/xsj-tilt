@@ -9,7 +9,7 @@ services:
   newsletter-microservice:
     build: 
       context: ../xsj-newsletter-microservice/
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     image: newsletter-microservice:latest
     container_name: xsj-newsletter-microservice
     environment:
@@ -21,7 +21,7 @@ services:
   users-microservice:
     build:
       context: ../xsj-users-microservice/
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     image: users-microservice:latest
     container_name: xsj-users-microservice
     environment:
@@ -33,7 +33,7 @@ services:
   deno-microservice:
     build:
       context: ../xsj-deno-microservice/
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     image: deno-microservice:latest
     container_name: xsj-deno-microservice
     environment:
@@ -45,7 +45,7 @@ services:
   ui-starter-app:
     build:
       context: ../.xsj-ui-starter-app.nosync/
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     image: ui-starter-app:latest
     container_name: xsj-ui-starter-app
     environment:
