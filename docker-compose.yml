@@ -30,6 +30,18 @@ services:
     ports:
       - 1017:1017
 
+  deno-microservice:
+    build:
+      context: ../xsj-deno-microservice/
+      dockerfile: Dockerfile
+    image: deno-microservice:latest
+    container_name: xsj-deno-microservice
+    environment:
+      PORT: 4200
+      HSOT: 0.0.0.0
+    ports:
+     - 4200:4200
+
   ui-starter-app:
     build:
       context: ../.xsj-ui-starter-app.nosync/
