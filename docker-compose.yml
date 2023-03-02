@@ -1,0 +1,43 @@
+version: "1.0"
+
+volumes: 
+  newsletter-microservice: null
+  users-microservice: null
+  ui-starter-app: null
+
+services:
+  newsletter-microservice:
+    build: 
+      context: ../xsj-newsletter-microservice/
+      dockerfile: Dockerfile
+    image: newsletter-microservice:latest
+    container_name: xsj-newsletter-microservice
+    environment:
+      PORT: 420
+      HOST: 0.0.0.0
+    ports:
+      - 420:420
+
+  users-microservice:
+    build:
+      context: ../xsj-users-microservice/
+      dockerfile: Dockerfile
+    image: users-microservice:latest
+    container_name: xsj-users-microservice
+    environment:
+      PORT: 1017
+      HOST: 0.0.0.0
+    ports:
+      - 1017:1017
+
+  ui-starter-app:
+    build:
+      context: ../.xsj-ui-starter-app.nosync/
+      dockerfile: Dockerfile
+    image: ui-starter-app:latest
+    container_name: xsj-ui-starter-app
+    environment:
+      PORT: 3000
+      HOST: 0.0.0.0
+    ports:
+      - 3000:3000
