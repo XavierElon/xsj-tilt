@@ -3,6 +3,7 @@ version: "1.0"
 volumes: 
   newsletter-microservice: null
   users-microservice: null
+  deno-microsvice: null
   ui-starter-app: null
 
 services:
