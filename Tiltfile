@@ -8,7 +8,10 @@ backend = {
     "deno-microservice": "http://localhost:4200/"
 }
 
-frontend = ["ui-starter-app"]
+frontend = {
+    "ui-starter-app": "http://localhost:3000/",
+    "xsj-consulting-app": "http://localhost:4269/"
+}
 
 def register_backend():
     for service in backend:
