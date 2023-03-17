@@ -5,6 +5,7 @@ volumes:
   users-microservice: null
   deno-microsvice: null
   ui-starter-app: null
+  xsj-consulting-app: null
 
 services:
   newsletter-microservice:
@@ -54,3 +55,15 @@ services:
       HOST: 0.0.0.0
     ports:
       - 3000:3000
+      
+   xsj-consulting-app:
+    build:
+      context: ../xsj-consulting-ui/
+      dockerfile: Dockerfile.dev
+    image: xsj-consulting-ui:latest
+    container_name: xsj-consulting-ui
+    environment:
+      PORT: 4269
+      HOST: 0.0.0.0
+    ports:
+      - 4269:4269
