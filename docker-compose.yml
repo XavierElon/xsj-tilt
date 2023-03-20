@@ -6,6 +6,7 @@ volumes:
   deno-microsvice: null
   ui-starter-app: null
   xsj-consulting-app: null
+  xsj-resuable-component-library: null
 
 services:
   newsletter-microservice:
@@ -67,3 +68,15 @@ services:
       HOST: 0.0.0.0
     ports:
       - 4269:4269
+
+  xsj-reusable-component-library:
+    build:
+      context: ../xsj-reusable-component-library/
+      dockerfile: Dockerfile.dev
+    image: xsj-reusable-component-library:latest
+    container_name: xsj-reusable-component-library
+    environment:
+      PORT: 6006
+      HOST: 0.0.0.0
+    ports:
+      - 6006:6006
