@@ -10,7 +10,8 @@ backend = {
 
 frontend = {
     "ui-starter-app": "http://localhost:3000/",
-    "xsj-consulting-app": "http://localhost:4269/"
+    "xsj-consulting-app": "http://localhost:4269/",
+    "xsj-reusable-component-library": "http://localhost:6006/"
 }
 
 def register_backend():
