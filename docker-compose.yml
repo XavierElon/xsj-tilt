@@ -52,12 +52,12 @@ services:
     image: ui-starter-app:latest
     container_name: xsj-ui-starter-app
     environment:
-      PORT: 3000
+      PORT: 3001
       HOST: 0.0.0.0
     ports:
-      - 3000:3000
+      - 3001:3001
       
-   xsj-consulting-app:
+  xsj-consulting-app:
     build:
       context: ../xsj-consulting-ui/
       dockerfile: Dockerfile.dev
@@ -69,7 +69,7 @@ services:
     ports:
       - 4269:4269
 
-  xsj-reusable-component-library:
+  xsj-reusable-components-library:
     build:
       context: ../xsj-reusable-component-library/
       dockerfile: Dockerfile.dev
